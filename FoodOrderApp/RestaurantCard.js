@@ -1,15 +1,22 @@
-import React from 'react';
+import React from "react";
+import "./restaurant-card.css";
 
-const RestaurantCard = () => {
-    return(
-        <div className="res-card">
-            <img alt="food-image" className="res-logo" src="https://i0.wp.com/vegecravings.com/wp-content/uploads/2018/10/Paneer-Makhani-Recipe-Step-By-Step-Instructions.jpg?fit=2939%2C2988&quality=65&strip=all&ssl=1"></img>
-            <h3>Milan</h3>
-            <h4>Veg Food, Indian, Punjabi Food</h4>            
-            <h4>28 mins</h4>
-            <h4 className="star-rating">4.6 star</h4>
-        </div>
-    );
+const RestaurantCard = (props) => {
+  const { resData } = props;
+  return (
+    <div className="res-card">
+      <img
+        alt="food-image"
+        className="res-logo"
+        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId}
+      ></img>
+      <h3>{resData.info.name}</h3>
+      <h4>{resData.info.cuisines.join(", ")}</h4>
+      <h4>{resData.info.costForTwo}</h4>
+      <h4>{resData.info.sla.deliveryTime} minutes</h4>
+      <h4 className="star-rating">{resData.info.avgRating + " star"}</h4>
+    </div>
+  );
 };
 
 export default RestaurantCard;

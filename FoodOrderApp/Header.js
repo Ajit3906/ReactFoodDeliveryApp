@@ -1,16 +1,17 @@
 import React from 'react';
+import './header.css';
 
 const Header = () => {
     return (<div className="header">
         <div className="logo">
-            <img src="https://i.pinimg.com/originals/68/9f/35/689f35fec5d9cc4c4faa2f76fb9d063d.jpg"></img>
+            <img src="https://cdn.dribbble.com/users/630677/screenshots/3833541/zootzoot1.jpg"></img>
         </div>
         <div className="nav-items">
             <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Contact us</li>
-                <li>Cart</li>
+                <li><h5>Search</h5></li>
+                <li><h5>Offers</h5></li>
+                <li><h5>SignIn</h5></li>
+                <li><h5>Cart</h5></li>
             </ul>
         </div>
     </div>
