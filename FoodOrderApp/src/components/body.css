@@ -6,3 +6,22 @@
     display: flex;
     flex-wrap: wrap;    
 }
+
+.body {
+    margin-top: 30px;
+}
+
+.filter {
+    position: absolute;
+    right: 20px;
+    top: 115px;
+}
+
+.filter-btn {
+    padding: 10px 10px;
+    background-color: #a73110;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
