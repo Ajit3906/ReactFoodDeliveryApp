@@ -1,10 +1,11 @@
 import React from 'react';
 import './header.css';
+import {LOGO_URL} from "../utils/constants";
 
 const Header = () => {
     return (<div className="header">
         <div className="logo">
-            <img src="https://cdn.dribbble.com/users/630677/screenshots/3833541/zootzoot1.jpg"></img>
+            <img src={LOGO_URL}></img>
         </div>
         <div className="nav-items">
             <ul>

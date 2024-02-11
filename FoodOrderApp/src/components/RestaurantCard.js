@@ -1,5 +1,6 @@
 import React from "react";
 import "./restaurant-card.css";
+import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
@@ -8,7 +9,7 @@ const RestaurantCard = (props) => {
       <img
         alt="food-image"
         className="res-logo"
-        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId}
+        src={CDN_URL+resData.info.cloudinaryImageId}
       ></img>
       <h3>{resData.info.name}</h3>
       <h4>{resData.info.cuisines.join(", ")}</h4>
