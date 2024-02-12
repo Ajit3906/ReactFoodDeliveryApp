@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ajit3906/NamasteReact.git"
+    "url": "git+https://github.com/Ajit3906/FoodNearMeProject.git"
   },
   "keywords": [],
   "author": "Ajit Patare",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ajit3906/NamasteReact/issues"
+    "url": "https://github.com/Ajit3906/FoodNearMeProject/issues"
   },
-  "homepage": "https://github.com/Ajit3906/NamasteReact#readme",
+  "homepage": "https://Ajit3906.github.io/FoodNearMeProject",
   "devDependencies": {
     "parcel": "^2.9.3",
     "process": "^0.11.10"
