@@ -1,19 +1,21 @@
 .res-card {
-    background-color: #f0f0f0;
+    background-color: #36454F;
     width: 200px;
-    padding: 5px;
+    padding: 10px;
     margin: 18px;
     border-radius: 15px;
 }
 
 .res-card:hover {
-    border: 1px solid black;
+    border: 1px solid lightblue;
     cursor: pointer;
 }
 
 .res-card > h3 , h4 {
-    margin-block-start: 0.3rem;
-    margin-block-end: 0.3rem;
+    color: #CCCCCC;
+    margin-block-start: 0.4rem;
+    margin-block-end: 0.4rem;
+    margin-right: 3px;
 }
 
 .res-card h4 {
@@ -21,7 +23,7 @@
 }
 
 .star-rating {
-    color: gold;
+    color: rgb(231, 218, 218);
     display: flex;
 }
 

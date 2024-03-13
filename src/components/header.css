@@ -32,3 +32,13 @@
     font-size: 24px;
     color: antiquewhite;
 }
+
+.login {
+    padding: 10px 10px;
+    background-color: #a73110;
+    color: white;
+    border: none;
+    margin: 5px;
+    font-size: 24px;
+    border-radius: 5px;
+}
