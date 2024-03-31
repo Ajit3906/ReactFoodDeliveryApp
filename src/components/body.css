@@ -12,13 +12,33 @@
 }
 
 .filter {
-    position: absolute;
-    right: 20px;
+    display: flex;
     top: 115px;
+    position: center;
+}
+
+.search-bar {
+    height: 20px;
+    margin: 9px;
+    border-radius: 2px;
+    color: #a73110;
+}
+
+.search-btn {
+    height: max-content;
+    padding: 10px 10px;
+    background-color: #a73110;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .filter-btn {
+    height: max-content;
     padding: 10px 10px;
+    margin-left: 1%;
+    margin-top: 5px;
     background-color: #a73110;
     color: white;
     border: none;
