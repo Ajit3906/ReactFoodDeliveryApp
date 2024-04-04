@@ -35,9 +35,9 @@ class About extends React.Component {
                     NewUser.js:10 New User is mounted
                     About.js:13 Parent component is mounted
                 */}
-                <UserClass name={"First"} location={"Lohgaon, Newasa"}/>
-                <UserClass name={"Second"} location={"Lohgaon, Newasa"}/>
-                <NewUser/>
+                <UserClass/>
+                {/* <UserClass name={"Second"} location={"Lohgaon, Newasa"}/> */}
+                {/* <NewUser/> */}
             </div>
         );
     }
