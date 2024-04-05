@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import ShimmerCards from "./ShimmerCards";
-import "./body.css";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import "./body.css";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -33,6 +35,10 @@ const Body = () => {
 
   return restaurantList?.length === 0 ? (
     <ShimmerCards />
+  ) : !onlineStatus ? (
+    <div>
+      <h2>You are offline</h2>
+    </div>
   ) : (
     <div className="body">
       <div className="filter">

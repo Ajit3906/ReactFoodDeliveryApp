@@ -1,6 +1,5 @@
 import React from "react";
 import UserClass from "./UserClass";
-import NewUser from "./NewUser";
 
 class About extends React.Component {
 
@@ -37,7 +36,6 @@ class About extends React.Component {
                 */}
                 <UserClass/>
                 {/* <UserClass name={"Second"} location={"Lohgaon, Newasa"}/> */}
-                {/* <NewUser/> */}
             </div>
         );
     }
