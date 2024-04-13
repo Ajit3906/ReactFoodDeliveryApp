@@ -32,13 +32,13 @@ class UserClass extends React.Component {
     const { name, avatar_url, bio, count } = this.state;
 
     return (
-      <div>
+      <div className="p-4 m-4">
         <h2>Developed By</h2>
-        <h3>Name: {name}</h3>
+        <h3>{name}</h3>
         <img src={avatar_url}></img>
         <h3>Info: {bio}</h3>
         <h3>Total Users: {count}</h3>
-        <button onClick={() => {
+        <button className="px-4 py-2 bg-red-700 rounded-lg" onClick={() => {
           this.setState({
             count: this.state.count + 1,
           });

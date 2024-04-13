@@ -8,7 +8,6 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ShimmerCards from "./components/ShimmerCards";
-
 const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {

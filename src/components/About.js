@@ -15,11 +15,7 @@ class About extends React.Component {
     render() {
         console.log("Parent render is called");
         return (
-            <div>
-                <h3>
-                    About us
-                </h3>
-                <h4>Develpoed in India</h4>
+            <div className="p-4 m-4">
                 {/* https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ Render Phase, Commit phase 
                     About.js:9 Parent constructor called
                     About.js:17 Parent render is called

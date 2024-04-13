@@ -1,7 +1,6 @@
 import ShimmerCards from "./ShimmerCards";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
-import "./restaurant-menu.css";
 
 const RestaurantMenu = () => {
   const {resId} = useParams();
@@ -19,7 +18,7 @@ const RestaurantMenu = () => {
   console.log(itemCards);
 
   return (
-    <div className="menu-container">
+    <div className="m-[20px]">
       <div>
         <h1>{name}</h1>
         <p>
