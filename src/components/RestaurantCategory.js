@@ -1,12 +1,10 @@
-import { useState } from "react";
 import ItemList from "./ItemList";
 import { GoChevronUp, GoChevronDown } from "react-icons/go";
 
-const RestaurantCategory = (data) => {
-  const [showItemCards, setShowItemCards] = useState(false);
+const RestaurantCategory = ({data, showItems, setShowIndex}) => {
 
   const handleClick = () => {
-    setShowItemCards(!showItemCards);
+    setShowIndex();
   };
 
   return (
@@ -15,9 +13,9 @@ const RestaurantCategory = (data) => {
         <span className="font-bold text-lg">
           {data.title} ({data.itemCards.length})
         </span>
-        <span>{showItemCards ? <GoChevronUp /> : <GoChevronDown />}</span>
+        <span>{showItems ? <GoChevronUp /> : <GoChevronDown />}</span>
       </div>
-      {showItemCards && <ItemList items={data.itemCards} />}
+      {showItems && <ItemList items={data.itemCards} />}
     </div>
   );
 };

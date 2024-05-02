@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ShimmerCards from "./ShimmerCards";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
@@ -8,13 +8,11 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   // custom hook
   const resInfo = useRestaurantMenu(resId);
+  const [showIndex, setShowIndex]  = useState(undefined);
 
   if (resInfo === null || resInfo === undefined) return <ShimmerCards />;
 
-  const { name, cuisines, costForTwo } = resInfo?.cards[2]?.card?.card?.info;
-
-  const { itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card;
+  const { name, cuisines } = resInfo?.cards[2]?.card?.card?.info;
 
   const filteredCards =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -23,7 +21,6 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  console.log(filteredCards);
 
   return (
     <div className="text-center">
@@ -36,7 +33,7 @@ const RestaurantMenu = () => {
         {filteredCards.map((item, index) => {
           return (
             <div key={index}>              
-              <RestaurantCategory {...item.card.card}/>              
+              <RestaurantCategory data={...item.card.card} showItems={ index===showIndex ? true : false} setShowIndex={ () => {index===showIndex ? setShowIndex(undefined) : setShowIndex(index)} }/>              
             </div>
           );          
         })}
